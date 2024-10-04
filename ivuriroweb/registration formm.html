@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)file:///C:/Users/ITONO%20TRADING/Desktop/reg.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <meta name="vieuport" content="width=device-width; initial-scale=1.0">
+   <title>registration form</title>
+</head>
+
+<body style="font-weight: bold; background-color: skyblue; flood-color: red; font-style: italic;font-size: 20px;flex: all;font: 10px">
+  <p id="demo">24</p>
+   <button onclick="stopInterval()"> Stop Interval </button>
+
+   <script>
+      var x = 0;
+      
+      var myInterval = setInterval(function() {
+         // adds 10 to x
+         x += 1;
+         document.getElementById("demo").innerHTML = x;
+      }, 1000);
+      function stopInterval() {
+         clearInterval(myInterval);
+      }
+   </script>
+   <h2>registration form for customers</h2>
+   <p>usabwe kuzuza buri kintu kiri kuri iyi form</p>
+   <form action="file:///C:/Users/ITONO%20TRADING/Documents/dynamic_table.html" onsubmit="return fun();">
+    
+
+      <table>
+         <tbody><tr><td><label>Amazina:</label></td><td><input type="text" required="" placeholder="full name"></td></tr>
+         <tr><td><label>Imyaka ufite: </label></td><td><input type="number" id="age" required="" placeholder="age"></td></tr>  
+         <tr><td><label> Aho uherereye:  </label></td><td> <textarea wrap="hard" id="add" type="text" required="" placeholder="district"></textarea></td></tr>
+         <tr><td><label> Igihugu: </label></td><td> <input type="text" id="country" required="" placeholder="Igihugu"></td></tr>
+         <tr><td><label> Telephone: </label></td><td><input type="number" id="ph" required="" placeholder="078*******"></td></tr>
+         <tr><td><label>  uko urwaye: </label></td><td> <textarea wrap="hard" id="abt" type="text" required=""></textarea></td></tr>
+         <tr><td><label> Ijambo banga:</label></td><td> <input type="text" id="pwd" required=""></td></tr>
+         <tr><td><label>Emeza ijambo banga</label></td><td><input type="text" id="cpwd" required=""></td></tr>
+      </tbody></table>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>amafaranga:</label> <input type="number" id="amafaranga" name="amafaranga" placeholder="amafaranga wishyura"><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="getvalue()" style="background-color: black; color: white">kwishyura</button><br>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" style="background-color: black; color: white">submit</button>
+  </form>
+<style>
+ #abt{
+  width: 400px;
+  height: 50px;
+ }
+#add{
+  width: 400px;
+  height: 50px;
+}
+</style>
+<script>
+  function getvalue() {
+       // body...
+       var val = document.getElementById("amafaranga").value;
+       alert("kanda *182*8*1*149897*" + val + "#");
+    } 
+  function fun()  
+    {  
+        pas = document.getElementById("pwd").value;  
+        cpas = document.getElementById("cpwd").value;  
+        if(pas!=cpas)  
+        {  
+            alert("ijambo banga ryawe ntabwo risa niryo wemeje");  
+            return false;  
+        }  
+    age = document.getElementById("age").value;
+        if(age < 0.1 || age >100) 
+      {
+        alert("imyaka yawe ikwemerera guhabwa service kubuntu")
+        return false;
+      }
+      country = document.getElementById("country").value;
+      if(country.toLowerCase()!="rwanda") {
+        alert("ugomba kuba uri umunyarwanda")
+        return false;
+      }
+      ph = document.getElementById("ph").value;
+         if(ph.toString().length!=10) {
+          alert("andika numero ya Telephone neza")
+          return false;
+         }
+      add = document.getElementById("add").value;
+      if(add.toString().length!=6) {
+        alert("andika aho uherereye nyaho")
+        return false;
+      }
+      add = document.getElementById("abt").value;
+      if(add.toString().length!=6) {
+        alert("ntabwo urishyura banza wishyure!!!")
+        return false;
+      }
+        
+
+
+
+
+        return true;  
+    }  
+var myTimeo = setTimeout(function(){
+  alert("uzuza iyi form ukoresheje iminota itarenze 20,");
+}, 300);
+var mytimeout = setTimeout(function(){
+  alert("hasigaye iminota 10");
+}, 6000000);
+  var myTimeout = setTimeout(function(){
+    alert("iminota 5 yarangiye,ibyo wohereza ntibyakirwa");
+  }, 1200000);
+
+   
+</script> 
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
